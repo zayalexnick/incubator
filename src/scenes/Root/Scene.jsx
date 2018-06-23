@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { hot } from 'react-hot-loader';
-import { Router } from '@reach/router';
+import { Router } from './styles';
 
 import Header from '~/modules/Header';
 
