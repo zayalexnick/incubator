@@ -8,6 +8,18 @@ injectGlobal`
   }
   
   body {
-    font: 16px/1 'Comfortaa', Helvetica, Arial, sans-serif;
+    font: 16px/1 'Open Sans', Helvetica, Arial, sans-serif;
+  }
+  
+  button, input, textarea, select {
+    border: 0;
+  
+    background: none;
+    
+    outline: none;
+  }
+  
+  button, input[type="submit"] {
+    cursor: pointer;
   }
 `;

@@ -9,7 +9,7 @@ module.exports = merge({
     devtool: 'eval-source-map',
     devServer: {
         contentBase: path.resolve(__dirname, '..', 'dist'),
-        host: 'localhost',
+        host: '0.0.0.0',
         port: 2253,
         historyApiFallback: true,
         hot: true,

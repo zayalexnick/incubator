@@ -8,7 +8,7 @@ module.exports = {
         publicPath: '/',
     },
     resolve: {
-        extensions: [ '.js', '.jsx' ],
+        extensions: [ '.js', '.jsx', '.json' ],
         alias: {
             '~': path.resolve(__dirname, '..', 'src'),
             'assets': path.resolve(__dirname, '..', 'assets'),
@@ -21,6 +21,15 @@ module.exports = {
                 use: 'babel-loader',
                 exclude: /node_modules/,
             },
+            {
+                test: /\.(jpg|png|svg|jpeg|gif)/,
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[ext]',
+                    publicPath: 'assets/',
+                    outputPath: 'assets/'
+                }
+            }
         ],
     },
     plugins: [
