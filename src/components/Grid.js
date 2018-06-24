@@ -1,16 +1,19 @@
 import styled from 'styled-components';
+import is from 'styled-is';
 
 export const Row = styled.div`
   display: flex;
   flex-wrap: wrap;
   
-  margin: 0 -20px;
+  margin: ${ props => props.indent ? `0 ${-props.indent}px` : '0 -15px' };
+  
+  > * {
+    padding: ${ props => props.indent ? `0 ${props.indent}px` : '0 15px' };
+  }
 `;
 
 export const Col = styled.div`
   width: 100%;
-  
-  padding: 0 20px;
   
   @media screen and (min-width: ${ props => props.theme.breakpoints.xs })
   {

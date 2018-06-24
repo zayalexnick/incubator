@@ -4,10 +4,9 @@ import { connect } from 'react-redux';
 import * as actions from './actions';
 
 import ResponsiveContainer from '~/components/ResponsiveContainer';
-import Content from '~/components/Content';
 import { Row, Col } from '~/components/Grid';
-import Popular from './Popular';
-import Business from './Business';
+
+import PopularNews from './Popular';
 
 @hot(module)
 @connect((state) => ({
@@ -24,20 +23,11 @@ export default class extends Component
 
     render()
     {
+        const { news } = this.props;
+
         return (
             <ResponsiveContainer>
-                <Content>
-                    <Popular />
-                    <Business />
-                    <Row>
-                        <Col lg={3/4}>
-
-                        </Col>
-                        <Col lg={1/4}>
-
-                        </Col>
-                    </Row>
-                </Content>
+                { news.get('popular').get('pending') === 'loaded' ? <PopularNews items={news.get('popular').toJS()} /> : null }
             </ResponsiveContainer>
         );
     }

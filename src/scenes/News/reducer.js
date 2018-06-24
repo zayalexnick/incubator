@@ -21,7 +21,7 @@ const initialState = Map({
 });
 
 const reducer = handleActions({
-    [actions.pendings]: (state, { payload, meta }) => { console.log(state, payload, meta); return state.setIn([payload, 'pending'], meta.pending) },
+    [actions.pendings]: (state, { payload, meta }) => state.setIn([payload, 'pending'], meta.pending),
     [actions.entities]: (state, { payload }) => state.setIn([payload.category, 'entities'], payload.entities),
     [actions.error]: (state, { payload }) => state.setIn([payload.category, 'error'], payload.error.message)
 }, initialState);
