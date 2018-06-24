@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Link as RouterLink } from '@reach/router';
+import { NavLink } from 'react-router-dom';
 
 export const Wrapper = styled.header`
   position: relative;
@@ -39,6 +39,6 @@ export const Logo = styled.img`
   }
 `;
 
-export const Link = styled(RouterLink)`
+export const Link = styled(NavLink)`
   padding: 20px 0;
 `;

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { findDOMNode } from 'react-dom';
 import _ from 'lodash';
 import enhanceWithClickOutside from 'react-click-outside';
 import { Container, List, Item, Link, Button } from './styles';
@@ -28,7 +27,7 @@ export default class extends Component
                 <List opened={opened}>
                     { _.map(navigation, (item, index) => (
                         <Item key={index}>
-                            <Link to={item.link} getProps={({ isCurrent }) => ({ current: isCurrent.toString() })} onClick={::this._close}>{ item.label }</Link>
+                            <Link to={item.link} activeClassName="active" onClick={::this._close}>{ item.label }</Link>
                         </Item>
                     )) }
                 </List>

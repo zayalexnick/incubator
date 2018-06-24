@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { rem, transitions } from 'polished';
-import is from 'styled-is';
-import { Link as RouterLink } from '@reach/router';
+import { NavLink } from 'react-router-dom';
 
 export const Container = styled.nav`
   display: flex;
@@ -53,7 +52,7 @@ export const Item = styled.li`
   }
 `;
 
-export const Link = styled(RouterLink)`
+export const Link = styled(NavLink)`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,7 +72,7 @@ export const Link = styled(RouterLink)`
     background-color: ${ props => props.theme.colors.white };
   }
   
-  &[current="true"] {
+  &.active {
     color: ${ props => props.theme.colors.white };
     background: ${ props => props.theme.colors.primary };
   }

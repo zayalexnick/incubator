@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { hot } from 'react-hot-loader';
-import { Page, Router } from './styles';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Page } from './styles';
 
 import Header from '~/modules/Header';
 
@@ -14,14 +15,16 @@ export default class extends Component
     render()
     {
         return (
-            <Page>
-                <Header />
-                <Router>
-                    <Main path="/" />
-                    <News path="/news" />
-                    <Profile path="/profile" />
-                </Router>
-            </Page>
+            <Router>
+                <Page>
+                    <Header />
+                    <Switch>
+                        <Route exact path="/" component={Main} />
+                        <Route exact path="/news" component={News} />
+                        <Route exact path="/profile" component={Profile} />
+                    </Switch>
+                </Page>
+            </Router>
         );
     }
 }
