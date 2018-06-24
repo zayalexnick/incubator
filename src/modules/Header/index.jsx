@@ -2,7 +2,6 @@ import React from 'react';
 import { Wrapper, Container, Logo, Link } from "./styles";
 
 import ResponsiveContainer from '~/components/ResponsiveContainer';
-import TopPanel from './TopPanel';
 import Navigation from './Navigation';
 
 export default () => (
@@ -15,6 +14,5 @@ export default () => (
                 <Navigation />
             </ResponsiveContainer>
         </Container>
-        <TopPanel />
     </Wrapper>
 );

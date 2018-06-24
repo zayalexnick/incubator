@@ -29,16 +29,4 @@ injectGlobal`
     
     min-height: 100vh;
   }
-  
-  main {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-  }
-  
-  section {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-  }
 `;

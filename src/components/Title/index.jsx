@@ -1,11 +1,7 @@
 import React from 'react';
-import { Container } from "./styles";
+import { Container } from './styles';
 
-type Props = {
-    children: string
-}
-
-export default ({ children }: Props) => (
+export default ({ children }) => (
     <Container>
         <span>{ children }</span>
     </Container>

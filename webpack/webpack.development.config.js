@@ -16,6 +16,14 @@ module.exports = merge({
         inline: true,
         noInfo: true,
         progress: true,
+        proxy: {
+            '/api': {
+                target: 'https://newsapi.org/v2',
+                pathRewrite: { '^/api': '' },
+                secure: false,
+                changeOrigin: true
+            }
+        },
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),

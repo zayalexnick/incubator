@@ -8,29 +8,25 @@ export const Background = styled.div`
   display: flex;
   flex: 1;
   
-  &:before, &:after {
+  background: url(${ props => props.image });
+  background-size: cover;
+  
+  * {
+    z-index: 2;
+  }
+  
+  &:after {
     content: '';
-    
+  
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-  }
-  
-  &:before {   
-    background: url(${ props => props.image });
-    background-size: cover;
-    
-    z-index: -2;
-  }
-  
-  &:after {
-    content: '';
     
     background: ${ props => rgba(props.theme.colors.black, 0.4) };
     
-    z-index: -1;
+    z-index: 1;
   }
 `;
 

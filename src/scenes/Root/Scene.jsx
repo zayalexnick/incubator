@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { hot } from 'react-hot-loader';
-import { Router } from './styles';
+import { Page, Router } from './styles';
 
 import Header from '~/modules/Header';
 
@@ -14,16 +14,14 @@ export default class extends Component
     render()
     {
         return (
-            <main>
+            <Page>
                 <Header />
-                <section>
-                    <Router>
-                        <Main path="/" />
-                        <News path="/news" />
-                        <Profile path="/profile" />
-                    </Router>
-                </section>
-            </main>
+                <Router>
+                    <Main path="/" />
+                    <News path="/news" />
+                    <Profile path="/profile" />
+                </Router>
+            </Page>
         );
     }
 }

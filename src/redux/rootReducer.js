@@ -1,5 +1,7 @@
 import { combineReducers } from 'redux';
 
-export default combineReducers({
+import newsReducer from '~/scenes/News/reducer';
 
+export default combineReducers({
+    news: newsReducer
 })

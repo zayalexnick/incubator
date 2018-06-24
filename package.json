@@ -33,6 +33,7 @@
     "@reach/router": "^1.1.1",
     "axios": "^0.18.0",
     "file-loader": "^1.1.11",
+    "immutable": "^3.8.2",
     "lodash": "^4.17.10",
     "moment": "^2.22.2",
     "polished": "^1.9.2",
