@@ -6,7 +6,7 @@ export const Page = styled.div`
   flex-direction: column;
   flex: 1;
   
-  background: ${ props => props.theme.colors.background };
+  background: ${ ({ theme }) => theme.colors.background };
 `;
 
 export const Router = styled(RouterComponent)`

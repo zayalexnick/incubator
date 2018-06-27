@@ -8,7 +8,7 @@ export const Background = styled.div`
   display: flex;
   flex: 1;
   
-  background: url(${ props => props.image });
+  background: url(${ ({ image }) => image });
   background-size: cover;
   
   * {
@@ -24,7 +24,7 @@ export const Background = styled.div`
     right: 0;
     bottom: 0;
     
-    background: ${ props => rgba(props.theme.colors.black, 0.4) };
+    background: ${ ({ theme }) => rgba(theme.colors.black, 0.4) };
     
     z-index: 1;
   }
@@ -48,7 +48,7 @@ export const Label = styled.label`
   margin-bottom: 20px;
   
   font-size: ${ rem('13px') };
-  color: ${ props => props.theme.colors.white };
+  color: ${ ({ theme }) => theme.colors.white };
 `;
 
 export const Input = styled.input`
@@ -58,14 +58,14 @@ export const Input = styled.input`
   margin-top: 10px;
   padding: 10px 16px;
   
-  color: ${ props => props.theme.colors.white };
+  color: ${ ({ theme }) => theme.colors.white };
   
   text-align: center;
   
-  border: 1px solid ${ props => rgba(props.theme.colors.white, 0.5) };
+  border: 1px solid ${ ({ theme }) => rgba(theme.colors.white, 0.5) };
   
   &:focus {
-    border-color: ${ props => props.theme.colors.primary };
+    border-color: ${ ({ theme }) => theme.colors.primary };
   }
 `;
 
@@ -77,16 +77,16 @@ export const Button = styled.button`
   
   font-size: ${ rem('14px') };
   font-weight: 600;
-  color: ${ props => props.theme.colors.black };
+  color: ${ ({ theme }) => theme.colors.black };
   
   text-align: center;
   
-  background-color: ${ props => props.theme.colors.white };
+  background-color: ${ ({ theme }) => theme.colors.white };
   
-  ${ props => transitions(`color ${props.theme.animation.speed}`, `background-color ${props.theme.animation.speed}`) };
+  ${ ({ theme }) => transitions(`color ${theme.animation.speed}`, `background-color ${theme.animation.speed}`) };
   
   &:hover {
-    color: ${ props => props.theme.colors.white };
-    background-color: ${ props => props.theme.colors.primary };
+    color: ${ props => theme.colors.white };
+    background-color: ${ props => theme.colors.primary };
   }
 `;

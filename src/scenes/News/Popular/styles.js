@@ -23,13 +23,13 @@ export const Container = styled(BrowserLink)`
     right: 0;
     bottom: 0;
     
-    background-color: ${ props => rgba(props.theme.colors.black, 0.8) };
-    ${ props => transitions(`background-color ${props.theme.animation.speed}`) };
+    background-color: ${ ({ theme }) => rgba(theme.colors.black, 0.8) };
+    ${ ({ theme }) => transitions(`background-color ${theme.animation.speed}`) };
     
-    @media screen and (min-width: ${ props => props.theme.breakpoints.md }) {
-      background-color: ${ props => rgba(props.theme.colors.black, 0.3) };
+    @media screen and (min-width: ${ ({ theme }) => theme.breakpoints.md }) {
+      background-color: ${ ({ theme }) => rgba(theme.colors.black, 0.3) };
         
-      ${ props => transitions(`background-color ${props.theme.animation.speed}`) };
+      ${ ({ theme }) => transitions(`background-color ${theme.animation.speed}`) };
     }
     
   }
@@ -45,7 +45,7 @@ export const Container = styled(BrowserLink)`
     }
     
     &:after {
-      background-color: ${ props => rgba(props.theme.colors.black, 0.8) };
+      background-color: ${ ({ theme }) => rgba(theme.colors.black, 0.8) };
     }
   }
 `;
@@ -64,11 +64,11 @@ export const Content = styled.div`
   
   z-index: 2;
   
-  @media screen and (min-width: ${ props => props.theme.breakpoints.md }) {
+  @media screen and (min-width: ${ ({ theme }) => theme.breakpoints.md }) {
     transform: translateY(20px);
     opacity: 0;
     
-     ${ props => transitions(`transform ${props.theme.animation.speed}`, `opacity ${props.theme.animation.speed}`) };
+     ${ ({ theme }) => transitions(`transform ${theme.animation.speed}`, `opacity ${theme.animation.speed}`) };
   }
 `;
 
@@ -77,17 +77,17 @@ export const Image = styled.div`
   
   padding-top: 56.25%;
   
-  background: url(${ props => props.src });
+  background: url(${ ({ src }) => src });
   background-size: cover;
   
-  ${ props => transitions(`transform ${props.theme.animation.speed}`) };
+  ${ ({ theme }) => transitions(`transform ${theme.animation.speed}`) };
 `;
 
 export const Title = styled.h3`
   flex: 1;
   
   font-size: ${ rem('16px') };
-  color: ${ props => props.theme.colors.white };
+  color: ${ ({ theme }) => theme.colors.white };
 `;
 
 export const Time = styled.div`
@@ -95,5 +95,5 @@ export const Time = styled.div`
 
   font-size: ${ rem('11px') };
   font-weight: 300;
-  color: ${ props => rgba(props.theme.colors.white, 0.5) };
+  color: ${ ({ theme }) => rgba(theme.colors.white, 0.5) };
 `;

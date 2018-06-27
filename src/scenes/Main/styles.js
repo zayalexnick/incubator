@@ -8,7 +8,7 @@ export const Background = styled.div`
   display: flex;
   flex: 1;
   
-  background: url(${ props => props.image });
+  background: url(${ ({ image }) => image });
   background-size: cover;
   
   * {
@@ -24,7 +24,7 @@ export const Background = styled.div`
     right: 0;
     bottom: 0;
     
-    background: ${ props => rgba(props.theme.colors.black, 0.4) };
+    background: ${ ({ theme }) => rgba(theme.colors.black, 0.4) };
     
     z-index: 1;
   }
@@ -48,5 +48,5 @@ export const Logo = styled.img`
 export const Title = styled.h1`
   font-size: ${ rem('20px') };
   font-weight: 300;
-  color: ${ props => props.theme.colors.white };
+  color: ${ ({ theme }) => theme.colors.white };
 `;
