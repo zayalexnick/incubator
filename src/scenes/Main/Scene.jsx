@@ -7,13 +7,6 @@ export default class extends Component
 {
     render()
     {
-        return (
-            <Background image={require('assets/main.jpg')}>
-                <Welcome>
-                    <Logo src={require('assets/logo.png')} />
-                    <Title>Добро пожаловать</Title>
-                </Welcome>
-            </Background>
-        );
+        return null;
     }
 }
