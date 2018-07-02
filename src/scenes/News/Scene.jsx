@@ -11,7 +11,7 @@ export default class extends Component
 {
     componentDidMount()
     {
-
+        this.props.getNews();
     }
 
     render()

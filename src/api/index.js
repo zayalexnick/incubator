@@ -1,9 +1,8 @@
 import instance from './instance';
 
 class Api {
-    static getPopular = async () => await instance.get('/api/top-headlines?language=ru');
-    static getBusiness = async () => await instance.get('/api/top-headlines?language=ru&category=business');
-    static getSport = async () => await instance.get('/api/top-headlines?language=ru&category=sport');
+    static news = async () => await instance.get('/api/news/?_expand=category');
+    static current = async (id) => await instance.get(`/api/news/1?_expand=category`);
 }
 
 export default Api;
