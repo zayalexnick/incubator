@@ -20,7 +20,7 @@ export const Item = styled(Link)`
 	
 	text-decoration: none;
 	
-	@media screen and (min-width: ${ ({ theme }) => theme.breakpoints.lg }) {
+	@media screen and (min-width: ${ ({ theme }) => theme.breakpoints.md }) {
 		width: 50%;
 	}
 	

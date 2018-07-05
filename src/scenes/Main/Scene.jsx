@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
-import { hot } from 'react-hot-loader';
+import ResponsiveContainer from '~/components/ResponsiveContainer';
+import setTitle from '~/utils/setTitle';
 
-@hot(module)
+@setTitle('Добро пожаловать')
 export default class extends Component
 {
-    render()
-    {
-        return null;
-    }
+	render()
+	{
+		return (
+			<ResponsiveContainer flex center>
+				<h1>Добро пожаловать</h1>
+			</ResponsiveContainer>
+		)
+	}
 }

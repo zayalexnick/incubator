@@ -9,7 +9,7 @@ export default () => (
         <Container>
             <ResponsiveContainer flex>
                 <Link to="/">
-                    <Logo src={require('assets/logo.png')} width={50} alt=""/>
+                    <Logo src={require('~/assets/logo.png')} width={50} alt=""/>
                 </Link>
                 <Navigation />
             </ResponsiveContainer>

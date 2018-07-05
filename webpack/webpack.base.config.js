@@ -1,5 +1,6 @@
 const path = require('path');
 const htmlPlugin = require('html-webpack-plugin');
+const cleanPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     entry: [ '@babel/polyfill', path.resolve(__dirname, '..', 'src', 'index.js') ],
@@ -11,7 +12,6 @@ module.exports = {
         extensions: [ '.js', '.jsx', '.json' ],
         alias: {
             '~': path.resolve(__dirname, '..', 'src'),
-            'assets': path.resolve(__dirname, '..', 'assets'),
         },
     },
     module: {
@@ -33,6 +33,7 @@ module.exports = {
         ],
     },
     plugins: [
+		new cleanPlugin(['../dist']),
         new htmlPlugin({
             template: path.resolve(__dirname, '..', 'src', 'index.html'),
             inject: 'body'

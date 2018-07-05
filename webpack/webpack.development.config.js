@@ -9,21 +9,13 @@ module.exports = merge({
     devtool: 'eval-source-map',
     devServer: {
         contentBase: path.resolve(__dirname, '..', 'dist'),
-        host: '0.0.0.0',
+        host: 'localhost',
         port: 2253,
         historyApiFallback: true,
         hot: true,
         inline: true,
         noInfo: true,
         progress: true,
-        /*proxy: {
-            '/api': {
-                target: 'http://localhost:5555',
-                pathRewrite: { '^/api': '' },
-                secure: false,
-                changeOrigin: true
-            }
-        },*/
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
