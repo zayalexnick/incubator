@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { rem } from 'polished';
 
 export default styled.div`
-	padding: 10px 20px;
+	padding: 0 20px;
 	
 	font-size: ${ rem('15px') };
 	font-weight: 500;

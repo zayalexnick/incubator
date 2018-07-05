@@ -13,8 +13,11 @@ export const Container = styled.section`
 export const Row = styled.div`
 	display: flex;
 	align-items: center;
+	flex-wrap: wrap;
 	
 	margin-bottom: 20px;
+	
+	line-height: 35px;
 	
 	span {
 		margin: 0 5px;
